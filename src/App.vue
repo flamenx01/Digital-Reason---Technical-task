@@ -17,20 +17,8 @@ import theHeader from '@/components/Common/TheHeader.vue';
     padding-right: 2.5rem; 
   }
 }
-.section > .container {
-    padding-left: 5.0625rem;
-    padding-right: 5.0625rem;
-}
-
-.btn--primary {
-  background: #cf1b46;
-  color: #fff;
-  border-color: #cf1b46;
-  &:hover {
-    background: #367d91;
-    border-color: #367d91;
-    color: #fff;
-  }
+section > .container {
+  padding: 5rem 5rem;
 }
 
 .btn {
@@ -42,6 +30,16 @@ import theHeader from '@/components/Common/TheHeader.vue';
   text-decoration: none;
   &:hover {
     cursor: pointer;
+  }
+  &.btn--primary {
+  background: #cf1b46;
+  color: #fff;
+  border-color: #cf1b46;
+    &:hover {
+      background: #367d91;
+      border-color: #367d91;
+      color: #fff;
+    }
   }
 }
 

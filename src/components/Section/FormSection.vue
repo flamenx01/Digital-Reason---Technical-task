@@ -50,6 +50,7 @@ const props = defineProps({
         font-size: 2rem;
         line-height: 1.4;
         font-weight: 300;
+        margin-right: 1rem;
       }
       label: {
         margin: 0 0 0 0.6rem;
