@@ -2,9 +2,9 @@
   <div v-if="currentPage" class="page">
     <div v-if="pageSections.length">
       <section
-        v-for="p in pageSections"
+        v-for="(p, index) in pageSections"
         :id="p.page_section_id"
-        :key="p.page_section_id"
+        :key="index"
         :class="[ p.page_section_type]"
         :style="{'background-image': getBackgroundImage(p)}"
         class="page-section">
@@ -19,10 +19,12 @@
           <title-section 
             v-else-if="p.page_section_type == 'title-section'"
             :page-section="p" />
-          <div 
-            v-else-if="p.page_section_type == 'help-section'" />
-          <div 
-            v-else-if="p.page_section_type == 'about-section'" />
+          <form-section 
+            v-else-if="p.page_section_type == 'form-section'"
+            :page-section="p" />
+          <card-section 
+            v-else-if="p.page_section_type == 'card-section'"
+            :page-section="p" />
           <div v-else class="page-section_container">
             <h2 v-if="p.page_section_title">{{ p.page_section_title }}</h2>
             <div v-html="p.page_section_content" />
@@ -36,6 +38,8 @@
 import { computed } from 'vue';
 import AdvancedSection from '@/components/Section/AdvancedSection.vue';
 import TitleSection from '@/components/Section/TitleSection.vue';
+import FormSection from '@/components/Section/FormSection.vue';
+import CardSection from '@/components/Section/CardSection.vue';
 const currentPage = computed(() => {
   return true;
 })
@@ -43,14 +47,14 @@ const currentPage = computed(() => {
 const pageSections = computed(() => {
   return [
     {
-      page_section_id: 0,
+      page_section_id: 'title',
       page_section_title: 'Get Online Week 2021',
       page_section_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       page_section_type: 'title-section',
       page_section_background_image: 'https://picsum.photos/1200/600',
     },
     {
-      page_section_id: 1,
+      page_section_id: 'section 1',
       page_section_title: 'AdvancedTest',
       page_section_type: 'advanced-section',
       left: {
@@ -63,6 +67,18 @@ const pageSections = computed(() => {
         page_section_image: 'https://picsum.photos/1500/900',
         page_section_alt: 'image'
       },
+    },
+    {
+      page_section_id: 'help',
+      page_section_title: 'How can we help you?',
+      page_section_text: "Let us know who you are and what you're looking for, and we'll help get you to the right place.",
+      page_section_type: 'form-section',
+    },
+    {
+      page_section_id: 'about-us',
+      page_section_title: 'What we do?',
+      page_section_text: "You might not have heard of us. Here are the following inpactful programmes:",
+      page_section_type: 'card-section',
     },
     {
       page_section_id: 2,

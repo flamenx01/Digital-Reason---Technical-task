@@ -22,6 +22,29 @@ import theHeader from '@/components/Common/TheHeader.vue';
     padding-right: 5.0625rem;
 }
 
+.btn--primary {
+  background: #cf1b46;
+  color: #fff;
+  border-color: #cf1b46;
+  &:hover {
+    background: #367d91;
+    border-color: #367d91;
+    color: #fff;
+  }
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 3rem;
+  border: 2px solid;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 *{
   font-family: Rubik,Helvetica Neue,Helvetica,Arial,sans-serif;
   margin: 0px;

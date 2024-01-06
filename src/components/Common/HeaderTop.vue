@@ -17,7 +17,7 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header__top {
   display: flex;
   justify-content: space-between;
@@ -31,6 +31,7 @@
       border-right: 1px solid #ccc;
       align-items: center;
       color: #000;
+      font-weight: 700;
       .icon {
         margin-right: 0.6rem;
         width: 1.5rem;
