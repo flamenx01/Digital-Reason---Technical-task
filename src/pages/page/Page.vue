@@ -1,5 +1,4 @@
 <template>
-  <h1>Page: {{id}}</h1>
   <page-with-sections />
 </template>
 
