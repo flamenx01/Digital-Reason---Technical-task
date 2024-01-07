@@ -1,4 +1,8 @@
 {"items": [
-  {"id": 0, "title": "Home", "url": "/"},
-  {"id": 1, "title": "About", "url": "/about"}
+  {"title": "Home", "url": "/"},
+  {"title": "What we do", "url": "/about"},
+  {"title": "The digital divide", "url": "/digital-divide"},
+  {"title": "Get involved", "url": "/get-involved"},
+  {"title": "Our network", "url": "/network"},
+  {"title": "insights", "url": "/insights"}
 ]}

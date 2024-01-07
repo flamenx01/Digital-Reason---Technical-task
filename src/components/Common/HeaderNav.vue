@@ -7,7 +7,7 @@
     </div>
     <nav class="header_nav">
       <ul>
-        <li v-for="item in store.menuItems" :key="item.ID">
+        <li v-for="(item, index) in store.menuItems" :key="index">
           <router-link :to="item.url">{{item.title}}</router-link>
         </li>
       </ul>

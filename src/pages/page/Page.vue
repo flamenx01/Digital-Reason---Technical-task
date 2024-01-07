@@ -3,13 +3,16 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { watch, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import pageWithSections from '@/components/Page/pageWithSections.vue';
 const route = useRoute();  
-const id = route.params.id;
 const page = ref([]);
-getPageByID(id);
+getPageByID(route.params.id);
+
+watch(route, () => {
+  getPageByID(route.params.id);
+});
 
 async function getPageByID(id) {
   const response = await fetch(`/data/pages/${id}.json`);

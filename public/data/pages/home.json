@@ -4,7 +4,7 @@
     "page_section_title": "Get Online Week 2021",
     "page_section_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "page_section_type": "title-section",
-    "page_section_background_image": "https://picsum.photos/1200/600"
+    "page_section_background_image": "https://picsum.photos/id/115/1200/600"
   },
   {
     "page_section_id": "section 1",
@@ -17,7 +17,7 @@
     },
     "right": {
       "page_section_layout": "image",
-      "page_section_image": "https://picsum.photos/1500/900",
+      "page_section_image": "https://picsum.photos/id/1080/1500/900",
       "page_section_alt": "image"
     }
   },
@@ -32,11 +32,5 @@
     "page_section_title": "What we do?",
     "page_section_text": "You might not have heard of us. Here are the following inpactful programmes:",
     "page_section_type": "card-section"
-  },
-  {
-    "page_section_id": "content",
-    "page_section_title": "Wibble",
-    "page_section_content": "<p>this is content</p>",
-    "page_section_type": ""
   }
 ]}
