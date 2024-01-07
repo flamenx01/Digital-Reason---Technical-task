@@ -22,7 +22,7 @@ const store = useThemeStore();
 if (!store.menuItems.length) store.getMenu();
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header_main {
   display: flex;
   justify-content: space-between;

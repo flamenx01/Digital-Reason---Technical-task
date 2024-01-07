@@ -13,7 +13,10 @@
     "left": {
       "page_section_layout": "content",
       "page_section_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "page_section_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "page_section_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "page_section_button": true,
+      "page_section_button_text": "Learn more about us",
+      "page_section_button_link": "/about"
     },
     "right": {
       "page_section_layout": "image",

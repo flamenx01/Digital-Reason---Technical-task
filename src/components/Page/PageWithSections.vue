@@ -25,9 +25,9 @@
           <card-section 
             v-else-if="p.page_section_type == 'card-section'"
             :page-section="p" />
-          <div v-else class="page-section_container">
+          <div v-else class="container page-section_container">
             <h2 v-if="p.page_section_title">{{ p.page_section_title }}</h2>
-            <div v-html="p.page_section_content" />
+            <p>{{p.page_section_content}}</p>
           </div>
       </section>
     </div>
@@ -62,7 +62,6 @@ const pageSections = computed(() => {
 function getBackgroundImage (pageSection) {
   return pageSection.page_section_background_image ? `url(${pageSection.page_section_background_image})`: 'none';
 }
-
 </script>
 
 <style lang="scss">
@@ -73,9 +72,11 @@ function getBackgroundImage (pageSection) {
   width: 100%;
   &_container {
     position: relative;
-      padding: 4rem 2rem;
-      max-width: 60rem;
-      margin: 0 auto;
+    max-width: 60rem !important;
+    margin: 0 auto;
+    h2 {
+      margin-bottom: 1.5rem;
+    }
   }
 }
 </style>

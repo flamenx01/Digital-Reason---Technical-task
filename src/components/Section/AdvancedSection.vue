@@ -3,6 +3,7 @@
       <div class="container">
         <h2>{{pageSection.page_section_title}}</h2>
         <p class="large-text">{{pageSection.page_section_content}}</p>
+        <router-link v-if="pageSection.page_section_button" :to="pageSection.page_section_button_link" class="btn btn--white">{{ pageSection.page_section_button_text }}</router-link>
       </div>
     </div>
     <div v-else-if="pageSection.page_section_layout == 'image'" class="image">
@@ -44,6 +45,10 @@ const props = defineProps({
           p {
             margin-top: 1.5rem;
             color: $light-text;
+          }
+          .btn {
+            margin-top: 1.5rem;
+            position: absolute;
           }
         }
       }

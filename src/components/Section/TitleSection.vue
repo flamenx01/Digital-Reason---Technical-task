@@ -21,7 +21,7 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .title-section {
   display: flex;
   align-items: center;

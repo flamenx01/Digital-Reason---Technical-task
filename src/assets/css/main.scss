@@ -56,7 +56,17 @@ p.large-text {
   &:hover {
     cursor: pointer;
   }
-  &.btn--primary {
+  &.btn--white {
+    background: transparent;
+    color: $light-text;
+    border-color: $light-text;
+    &:hover {
+      background: $light-text;
+      border-color: $light-text;
+      color: $dark-text;
+    }
+  }
+  &.btn--alt-2 {
   background: $alt-color-2;
   color: $light-text;
   border-color: $alt-color-2;

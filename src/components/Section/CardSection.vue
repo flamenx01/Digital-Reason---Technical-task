@@ -9,28 +9,28 @@
             <div class="grid-item__content">
                <strong>Get Online Week</strong>
                <p>Lorem ipsum dolor sit amet</p>
-               <a href="" class="btn btn--primary">Find out more</a>
+               <a href="" class="btn btn--alt-2">Find out more</a>
             </div>
          </div>
          <div class="grid-item">
             <div class="grid-item__content">
                <strong>Get Online Week</strong>
                <p>Lorem ipsum dolor sit amet</p>
-               <a href="" class="btn btn--primary">Find out more</a>
+               <a href="" class="btn btn--alt-2">Find out more</a>
             </div>
          </div>
          <div class="grid-item">
             <div class="grid-item__content">
                <strong>Get Online Week</strong>
                <p>Lorem ipsum dolor sit amet</p>
-               <a href="" class="btn btn--primary">Find out more</a>
+               <a href="" class="btn btn--alt-2">Find out more</a>
             </div>
          </div>
          <div class="grid-item">
             <div class="grid-item__content">
                <strong>Get Online Week</strong>
                <p>Lorem ipsum dolor sit amet</p>
-               <a href="" class="btn btn--primary">Find out more</a>
+               <a href="" class="btn btn--alt-2">Find out more</a>
             </div>
          </div>
       </div>
@@ -47,7 +47,7 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
    .card-section {
       background-color: $alt-color;
       &_intro {

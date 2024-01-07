@@ -9,7 +9,7 @@
 			<option value="robot">robot</option>
 			<option value="robotPerson">robot pretending to be a person</option>
 		</select>
-    <input type="submit" class="btn btn--primary" value="Start now">
+    <input type="submit" class="btn btn--alt-2" value="Start now">
   </form>
 </div>
 </template>
@@ -24,7 +24,7 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .form-section {
     background-color: $grey-color;
     h2 {
