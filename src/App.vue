@@ -5,8 +5,8 @@
 </template>
 
 <script setup>
-import theHeader from '@/components/Common/TheHeader.vue';
-import theFooter from '@/components/Common/TheFooter.vue';
+import theHeader from '@/components1/Common/TheHeader.vue';
+import theFooter from '@/components1/Common/TheFooter.vue';
 </script>
 
 <style lang="scss">
