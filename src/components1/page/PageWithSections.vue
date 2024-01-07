@@ -36,10 +36,10 @@
 
 <script setup>
 import { ref, computed, watchEffect } from 'vue';
-import AdvancedSection from '@/components1/Section/AdvancedSection.vue';
-import TitleSection from '@/components1/Section/TitleSection.vue';
-import FormSection from '@/components1/Section/FormSection.vue';
-import CardSection from '@/components1/Section/CardSection.vue';
+import AdvancedSection from '@/components1/section/AdvancedSection.vue';
+import TitleSection from '@/components1/section/TitleSection.vue';
+import FormSection from '@/components1/section/FormSection.vue';
+import CardSection from '@/components1/section/CardSection.vue';
 
 const props = defineProps({
    page : { 
