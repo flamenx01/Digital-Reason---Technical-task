@@ -48,6 +48,10 @@ const props = defineProps({
         line-height: 1.4;
         font-weight: 300;
         margin-bottom: 1.5rem;
+        @media (max-width: 45rem) {
+          font-size: 1.25em;
+          line-height: 1.4;
+        }
       }
       label: {
         margin: 0 0 0 0.6rem;

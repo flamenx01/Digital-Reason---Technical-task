@@ -81,7 +81,7 @@ import searchIcon from '@/assets/icons/search.svg';
         }
       }
       &-donate {
-        background: #cf1b46;
+        background: $alt-color-2;
         color: $light-text;
         &:hover {
           background: $main-color;

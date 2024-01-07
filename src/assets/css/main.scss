@@ -1,5 +1,7 @@
+
 section > .container {
-  padding: 5rem 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .container {
@@ -55,9 +57,9 @@ p.large-text {
     cursor: pointer;
   }
   &.btn--primary {
-  background: #cf1b46;
+  background: $alt-color-2;
   color: $light-text;
-  border-color: #cf1b46;
+  border-color: $alt-color-2;
     &:hover {
       background: $main-color;
       border-color: $main-color;
