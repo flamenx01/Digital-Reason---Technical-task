@@ -10,6 +10,7 @@ export default defineConfig({
         { find: '@', replacement: path.resolve(__dirname, 'src') },
     ],
   },
+  // Inject SASS variables into all scss files
   css: {
     preprocessorOptions: {
       scss: {

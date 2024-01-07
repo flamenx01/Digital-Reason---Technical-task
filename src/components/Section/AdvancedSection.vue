@@ -2,7 +2,7 @@
     <div v-if="pageSection.page_section_layout == 'content'" class="advanced_container">
       <div class="container">
         <h2>{{pageSection.page_section_title}}</h2>
-        <p>{{pageSection.page_section_content}}</p>
+        <p class="large-text">{{pageSection.page_section_content}}</p>
       </div>
     </div>
     <div v-else-if="pageSection.page_section_layout == 'image'" class="image">
@@ -39,14 +39,10 @@ const props = defineProps({
         .container {
           width: 100%;
           h2 {
-            font-size: 2.25em;
-            line-height: 1.2;
             color: $light-text;
           }
           p {
             margin-top: 1.5rem;
-            font-size: 1.5em;
-            line-height: 1.3;
             color: $light-text;
           }
         }

@@ -1,7 +1,7 @@
 <template>
 <div class="form-section container">
   <h2>{{pageSection.page_section_title}}</h2>
-  <p>{{pageSection.page_section_text}}</p>
+  <p class="large-text">{{pageSection.page_section_text}}</p>
   <form>
     <label class="">I am a</label>
     <select class="" name="" id="">
@@ -28,14 +28,10 @@ const props = defineProps({
   .form-section {
     background-color: $grey-color;
     h2 {
-        font-size: 2.25em;
-        line-height: 1.2;
         color: $dark-text;
       }
     p {
       margin-top: 1.5rem;
-      font-size: 1.5em;
-      line-height: 1.3;
       color: $dark-text;
     }
     form {

@@ -4,7 +4,7 @@
       <h1 class="title-section__title">
         {{ pageSection.page_section_title }}
       </h1>
-      <p class="title-section__text">
+      <p class="title-section__text large-text">
         {{ pageSection.page_section_text }}
       </p>
     </div>
@@ -32,16 +32,12 @@ const props = defineProps({
     color: $light-text;
     padding: 1.5rem;
     display: inline-block;
-    font-size: 3.375em;
-    line-height: 1.1;
   }
   &__text {
     background-color: $light-text;
     color: $alt-color;
     padding: 1.5rem;
     max-width: 40rem;
-    font-size: 1.5em;
-    line-height: 1.3;
   }
 }
 

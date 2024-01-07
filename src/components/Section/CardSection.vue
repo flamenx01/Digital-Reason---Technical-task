@@ -2,7 +2,7 @@
    <div class="card-section container">
       <div class="card-section_intro">
          <h2>{{pageSection.page_section_title}}</h2>
-         <p>{{pageSection.page_section_text}}</p>
+         <p class="large-text">{{pageSection.page_section_text}}</p>
       </div>
       <div class=grid>
          <div class="grid-item">
@@ -52,14 +52,10 @@ const props = defineProps({
       background-color: $alt-color;
       &_intro {
          h2 {
-            font-size: 2.25em;
-            line-height: 1.2;
             color: $light-text;
             }
          p {
             margin-top: 1.5rem;
-            font-size: 1.5em;
-            line-height: 1.3;
             color: $light-text;
          }
       }
@@ -84,6 +80,14 @@ const props = defineProps({
                .btn {
                   margin-top: 1.5rem;
                }
+            }
+         }
+         @media (max-width: 45rem) {
+            margin-left: -1.5rem;
+            .grid-item {
+               width: 100%;
+               margin-top: 1.5rem;
+               margin-left: 1.5rem;
             }
          }
       }
