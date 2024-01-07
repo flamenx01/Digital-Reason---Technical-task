@@ -35,19 +35,19 @@ const props = defineProps({
         height: 100%;
         padding-bottom: 2.25rem;
         padding-top: 2.25rem;
-        background-color: #2f8375;
+        background-color: $alt-color;
         .container {
           width: 100%;
           h2 {
             font-size: 2.25em;
             line-height: 1.2;
-            color: #fff;
+            color: $light-text;
           }
           p {
             margin-top: 1.5rem;
             font-size: 1.5em;
             line-height: 1.3;
-            color: #fff;
+            color: $light-text;
           }
         }
       }
@@ -63,6 +63,14 @@ const props = defineProps({
           padding-bottom: 2.25rem;
           padding-top: 2.25rem;
         }
+      }
+    }
+    @media (max-width: 65rem) {
+      .left, .right {
+        width: 100%;
+      }
+      .left.advanced_container {
+        order: 1;
       }
     }
   }

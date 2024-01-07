@@ -2,8 +2,8 @@
   <div class="header__top container">
     <div class="header__top__search">
       <router-link class="button" aria-label="Homepage" to="/">
-        <svg aria-hidden="true" class="icon" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M15.055 30.391a15.034 15.034 0 1110.627-4.403 14.936 14.936 0 01-10.627 4.403zm0-25.743a10.706 10.706 0 107.56 3.135 10.638 10.638 0 00-7.56-3.135z"></path><path d="M33.44 35.906a2.16 2.16 0 01-1.526-.633l-9.284-9.285a2.16 2.16 0 013.052-3.056l9.288 9.288a2.16 2.16 0 01-1.53 3.686z"></path></g></svg>
-        Search
+        <object class="icon" :data="searchIcon" width="24" height="24" />  
+        <span>Search</span>
       </router-link>
     </div>
     <div class="header__top__actions">
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-
+import searchIcon from '@/assets/icons/search.svg';
 </script>
 
 <style lang="scss" scoped>
@@ -30,7 +30,7 @@
       border-left: 1px solid #ccc;
       border-right: 1px solid #ccc;
       align-items: center;
-      color: #000;
+      color: $dark-text;
       font-weight: 700;
       .icon {
         margin-right: 0.6rem;
@@ -38,8 +38,17 @@
         height: 1.5rem;
       }
       &:hover {
-        background: #ececec;
-        color: #000;
+        background: $grey-color;
+        color: $dark-text;
+      }
+      @media (max-width: 45rem) {
+        span {
+          display: none;
+        }
+        .icon {
+          margin-right: 0;
+        }
+
       }
     }
   }
@@ -52,19 +61,19 @@
       padding: 0.6rem 1.5rem;
       font-weight: 700;
       &-learn {
-        background: #fff;
-        color: #000;
+        background: $light-text;
+        color: $dark-text;
         border-left: 1px solid #ccc;
         &:hover {
-          background: #ececec;
-          color: #000;
+          background: $grey-color;
+          color: $dark-text;
         }
         &:after {
           content: "";
           position: absolute;
           width: 100%;
           height: .25rem;
-          background-color: #2f8375;
+          background-color: $alt-color;
           display: block;
           left: 0;
           right: 0;
@@ -73,10 +82,10 @@
       }
       &-donate {
         background: #cf1b46;
-        color: #fff;
+        color: $light-text;
         &:hover {
-          background: #367d91;
-          color: #fff;
+          background: $main-color;
+          color: $light-text;
         }
       }
     }

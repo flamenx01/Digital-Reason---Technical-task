@@ -53,12 +53,12 @@ if (!store.menuItems.length) store.getMenu();
           text-decoration: none;
           font-size: 1.1rem;
           font-weight: 500;
-          color: #000;
+          color: $dark-text;
           &:visited {
-            color: #000;
+            color: $dark-text;
           }
           &:hover {
-            color: #367d91;
+            color: $main-color;
           }
         }
       }

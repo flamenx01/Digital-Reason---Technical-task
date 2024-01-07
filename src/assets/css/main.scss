@@ -6,6 +6,10 @@
     padding-left: 2.5rem;
     padding-right: 2.5rem; 
   }
+  @media (max-width: 30rem) {
+    padding-left: 0rem;
+    padding-right: 0rem; 
+  }
 }
 section > .container {
   padding: 5rem 5rem;
@@ -23,12 +27,12 @@ section > .container {
   }
   &.btn--primary {
   background: #cf1b46;
-  color: #fff;
+  color: $light-text;
   border-color: #cf1b46;
     &:hover {
-      background: #367d91;
-      border-color: #367d91;
-      color: #fff;
+      background: $main-color;
+      border-color: $main-color;
+      color: $light-text;
     }
   }
 }

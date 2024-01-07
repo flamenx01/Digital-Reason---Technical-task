@@ -1,6 +1,8 @@
 <template>
-  <header-top />
-  <header-nav />
+  <header>
+    <header-top />
+    <header-nav />
+  </header>
 </template>
 
 <script setup>

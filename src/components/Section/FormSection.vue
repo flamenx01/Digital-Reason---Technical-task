@@ -26,17 +26,17 @@ const props = defineProps({
 
 <style lang="scss">
   .form-section {
-    background-color: #ececec;
+    background-color: $grey-color;
     h2 {
         font-size: 2.25em;
         line-height: 1.2;
-        color: black;
+        color: $dark-text;
       }
     p {
       margin-top: 1.5rem;
       font-size: 1.5em;
       line-height: 1.3;
-      color: black;
+      color: $dark-text;
     }
     form {
       display: flex;
@@ -44,13 +44,14 @@ const props = defineProps({
       align-items: flex-start;
       padding: 2.25em;
       margin-top: 2.25rem;
-      background-color: white;
+      background-color: $light-text;
       flex-wrap: wrap;
+      flex-direction: column;
       label, select{
         font-size: 2rem;
         line-height: 1.4;
         font-weight: 300;
-        margin-right: 1rem;
+        margin-bottom: 1.5rem;
       }
       label: {
         margin: 0 0 0 0.6rem;
@@ -58,11 +59,11 @@ const props = defineProps({
       select {
         background: none;
         border: none;
-        border-bottom: 3px solid #367d91;
-        color: #367d91;
+        border-bottom: 3px solid $main-color;
+        color: $main-color;
         option {
           font-size: 1rem;
-          color: black;
+          color: $dark-text;
         }
       }
     }

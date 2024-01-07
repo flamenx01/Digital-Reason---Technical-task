@@ -49,18 +49,18 @@ const props = defineProps({
 
 <style lang="scss">
    .card-section {
-      background-color: #2f8375;
+      background-color: $alt-color;
       &_intro {
          h2 {
             font-size: 2.25em;
             line-height: 1.2;
-            color: white;
+            color: $light-text;
             }
          p {
             margin-top: 1.5rem;
             font-size: 1.5em;
             line-height: 1.3;
-            color: white;
+            color: $light-text;
          }
       }
       .grid {
@@ -70,7 +70,7 @@ const props = defineProps({
          margin-left: -2.25rem;
          .grid-item {
             margin-top: 2.25rem;
-            background: white;
+            background: $light-text;
             margin-left: 2.25rem;
             &__content {
                padding: 2.25rem;

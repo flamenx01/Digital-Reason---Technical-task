@@ -10,5 +10,11 @@ export default defineConfig({
         { find: '@', replacement: path.resolve(__dirname, 'src') },
     ],
   },
-  // css : ['~/src/assets/css/main.scss'],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/css/variables.scss";`
+      }
+    }
+  }
 })

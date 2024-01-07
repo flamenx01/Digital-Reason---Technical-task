@@ -28,16 +28,16 @@ const props = defineProps({
   padding-bottom: 5.0625rem;
   padding-top: 5.0625rem;
   &__title {
-    background-color: #367d91;
-    color: #fff;
+    background-color: $main-color;
+    color: $light-text;
     padding: 1.5rem;
     display: inline-block;
     font-size: 3.375em;
     line-height: 1.1;
   }
   &__text {
-    background-color: #fff;
-    color: #2f8375;
+    background-color: $light-text;
+    color: $alt-color;
     padding: 1.5rem;
     max-width: 40rem;
     font-size: 1.5em;
