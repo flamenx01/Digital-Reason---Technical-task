@@ -14,7 +14,7 @@ export const useThemeStore = defineStore('themeStore', {
         const result = await response.json();
         this.menuItems = result.items;
       } catch (err) {
-        console.error('Error loading new arrivals:', err);
+        console.error('Error loading menu:', err);
         return err;
       }
     }

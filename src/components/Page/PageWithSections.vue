@@ -1,6 +1,6 @@
 <template>
   <div v-if="currentPage" class="page">
-    <div v-if="pageSections.length">
+    <div v-if="currentPage.sections && currentPage.sections.length">
       <section
         v-for="(p, index) in pageSections"
         :id="p.page_section_id"
@@ -35,62 +35,31 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { ref, computed, watchEffect } from 'vue';
 import AdvancedSection from '@/components/Section/AdvancedSection.vue';
 import TitleSection from '@/components/Section/TitleSection.vue';
 import FormSection from '@/components/Section/FormSection.vue';
 import CardSection from '@/components/Section/CardSection.vue';
-const currentPage = computed(() => {
-  return true;
-})
 
-const pageSections = computed(() => {
-  return [
-    {
-      page_section_id: 'title',
-      page_section_title: 'Get Online Week 2021',
-      page_section_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      page_section_type: 'title-section',
-      page_section_background_image: 'https://picsum.photos/1200/600',
-    },
-    {
-      page_section_id: 'section 1',
-      page_section_title: 'AdvancedTest',
-      page_section_type: 'advanced-section',
-      left: {
-        page_section_layout: 'content',
-        page_section_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        page_section_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      },
-      right: {
-        page_section_layout: 'image',
-        page_section_image: 'https://picsum.photos/1500/900',
-        page_section_alt: 'image'
-      },
-    },
-    {
-      page_section_id: 'help',
-      page_section_title: 'How can we help you?',
-      page_section_text: "Let us know who you are and what you're looking for, and we'll help get you to the right place.",
-      page_section_type: 'form-section',
-    },
-    {
-      page_section_id: 'about-us',
-      page_section_title: 'What we do?',
-      page_section_text: "You might not have heard of us. Here are the following inpactful programmes:",
-      page_section_type: 'card-section',
-    },
-    {
-      page_section_id: 2,
-      page_section_title: 'Wibble',
-      page_section_content: '<p>this is content</p>',
-      page_section_type: '',
-    },
-  ];
+const props = defineProps({
+   page : { 
+      type: Object, default: () => {
+        return {}
+      }
+   },
 });
 
+const currentPage = ref(props.page);
+
+watchEffect(() => {
+  currentPage.value = props.page;
+});
+
+const pageSections = computed(() => {
+  return currentPage.value && currentPage.value.sections ? currentPage.value.sections : [];
+})
+
 function getBackgroundImage (pageSection) {
-  console.log(pageSection.page_section_background_image);
   return pageSection.page_section_background_image ? `url(${pageSection.page_section_background_image})`: 'none';
 }
 

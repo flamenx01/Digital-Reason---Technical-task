@@ -8,44 +8,5 @@ import theHeader from '@/components/Common/TheHeader.vue';
 </script>
 
 <style lang="scss">
-.container {
-  max-width: 120rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  @media (max-width: 45rem) {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem; 
-  }
-}
-section > .container {
-  padding: 5rem 5rem;
-}
-
-.btn {
-  padding: 0.6rem 1.5rem;
-  border-radius: 3rem;
-  border: 2px solid;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  &:hover {
-    cursor: pointer;
-  }
-  &.btn--primary {
-  background: #cf1b46;
-  color: #fff;
-  border-color: #cf1b46;
-    &:hover {
-      background: #367d91;
-      border-color: #367d91;
-      color: #fff;
-    }
-  }
-}
-
-*{
-  font-family: Rubik,Helvetica Neue,Helvetica,Arial,sans-serif;
-  margin: 0px;
-  padding: 0px;
-}
+  @import '@/assets/css/main.scss';
 </style>
