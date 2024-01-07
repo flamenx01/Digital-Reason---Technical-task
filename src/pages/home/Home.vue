@@ -4,7 +4,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import pageWithSections from '@/components/page/pageWithSections.vue';
+import pageWithSections from 'HOMEFOLDER/components/page/pageWithSections.vue';
 
 const page = ref({});
 getHomepage();

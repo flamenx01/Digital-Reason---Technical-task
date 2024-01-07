@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: [
         { find: '@', replacement: path.resolve(__dirname, 'src') },
+        { find: 'HOMEFOLDER', replacement: path.resolve(__dirname, 'src') },
     ],
   },
   // Inject SASS variables into all scss files
