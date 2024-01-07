@@ -5,7 +5,7 @@
 <script setup>
 import { watch, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import pageWithSections from '@/components/Page/pageWithSections.vue';
+import pageWithSections from '@/components/page/pageWithSections.vue';
 const route = useRoute();  
 const page = ref([]);
 getPageByID(route.params.id);
