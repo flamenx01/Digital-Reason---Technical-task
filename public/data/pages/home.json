@@ -34,6 +34,28 @@
     "page_section_id": "about-us",
     "page_section_title": "What we do?",
     "page_section_text": "You might not have heard of us. Here are the following inpactful programmes:",
-    "page_section_type": "card-section"
+    "page_section_type": "card-section",
+    "cards" : [
+      {
+        "title": "About",
+        "text": "Lorem ipsum dolor sit amet",
+        "link": "/about"
+      },
+      {
+        "title": "Insights",
+        "text": "Lorem ipsum dolor sit amet",
+        "link": "/insights"
+      },
+      {
+        "title": "Get Involved",
+        "text": "Lorem ipsum dolor sit amet",
+        "link": "/get-involved"
+      },
+      {
+        "title": "Network",
+        "text": "Lorem ipsum dolor sit amet",
+        "link": "/network"
+      }
+    ]
   }
 ]}

@@ -4,33 +4,15 @@
          <h2>{{pageSection.page_section_title}}</h2>
          <p class="large-text">{{pageSection.page_section_text}}</p>
       </div>
-      <div class=grid>
-         <div class="grid-item">
+      <div v-if="pageSection.cards.length" class=grid>
+         <div 
+            v-for="(card, index) in pageSection.cards"
+            :key="index"
+            class="grid-item">
             <div class="grid-item__content">
-               <strong>Get Online Week</strong>
-               <p>Lorem ipsum dolor sit amet</p>
-               <a href="" class="btn btn--alt-2">Find out more</a>
-            </div>
-         </div>
-         <div class="grid-item">
-            <div class="grid-item__content">
-               <strong>Get Online Week</strong>
-               <p>Lorem ipsum dolor sit amet</p>
-               <a href="" class="btn btn--alt-2">Find out more</a>
-            </div>
-         </div>
-         <div class="grid-item">
-            <div class="grid-item__content">
-               <strong>Get Online Week</strong>
-               <p>Lorem ipsum dolor sit amet</p>
-               <a href="" class="btn btn--alt-2">Find out more</a>
-            </div>
-         </div>
-         <div class="grid-item">
-            <div class="grid-item__content">
-               <strong>Get Online Week</strong>
-               <p>Lorem ipsum dolor sit amet</p>
-               <a href="" class="btn btn--alt-2">Find out more</a>
+               <strong>{{card.title}}</strong>
+               <p>{{card.text}}</p>
+               <router-link :to="card.link" class="btn btn--alt-2">Find out more</router-link>
             </div>
          </div>
       </div>

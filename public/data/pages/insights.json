@@ -1,10 +1,10 @@
 {"sections": [
   {
     "page_section_id": "title",
-    "page_section_title": "Digital Divide",
+    "page_section_title": "Insights",
     "page_section_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "page_section_type": "title-section",
-    "page_section_background_image": "https://picsum.photos/id/118/1200/600"
+    "page_section_background_image": "https://picsum.photos/id/120/1200/600"
   },
   {
     "page_section_id": "content",

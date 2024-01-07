@@ -77,6 +77,9 @@ function getBackgroundImage (pageSection) {
     h2 {
       margin-bottom: 1.5rem;
     }
+    p {
+      line-height: 1.3;
+    }
   }
 }
 </style>
