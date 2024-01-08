@@ -1,32 +1,33 @@
 <template>
-  <div class="header_main container">
-    <div class="header_branding">
-      <router-link class="header_branding__logo" aria-label="Homepage" to="/">
-        <img src="https://www.goodthingsfoundation.org/wp-content/uploads/2021/01/good-things-foundation-logo.png" alt="Branding Logo">
-      </router-link >
+  <div>
+    <div class="header_main container">
+      <div class="header_branding">
+        <router-link class="header_branding__logo" aria-label="Homepage" to="/">
+          <img src="https://www.goodthingsfoundation.org/wp-content/uploads/2021/01/good-things-foundation-logo.png" alt="Branding Logo">
+        </router-link >
+      </div>
+      <nav class="header-nav nav-menu">
+        <ul>
+          <li v-for="(item, index) in store.menuItems" :key="index">
+            <router-link :to="item.url">{{item.title}}</router-link>
+          </li>
+        </ul>
+      </nav>
+      <button @click="showMenu = !showMenu" class="nav-button btn btn--alt-2">Menu</button>
     </div>
-    <nav class="header-nav nav-menu">
+    <nav v-if="showMenu" class="mobile-nav nav-menu container">
       <ul>
         <li v-for="(item, index) in store.menuItems" :key="index">
           <router-link :to="item.url">{{item.title}}</router-link>
         </li>
       </ul>
     </nav>
-    <button @click="showMenu = !showMenu" class="nav-button btn btn--alt-2">Menu</button>
   </div>
-  <nav v-if="showMenu" class="mobile-nav nav-menu container">
-    <ul>
-      <li v-for="(item, index) in store.menuItems" :key="index">
-        <router-link :to="item.url">{{item.title}}</router-link>
-      </li>
-    </ul>
-  </nav>
 </template>
 
 <script setup>
 import { useThemeStore } from '@/stores/store';
 import { ref } from "vue"
-const windowWidth = ref(window.innerWidth)
 const store = useThemeStore();
 if (!store.menuItems.length) store.getMenu();
 
