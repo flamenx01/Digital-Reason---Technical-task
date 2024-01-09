@@ -19,7 +19,9 @@ async function getPageByID(id) {
   try {
     const result = await response.json();
     page.value = result;
+    document.title = result.title;
   } catch (err) {
+    document.title = "Page Not Found";
     page.value = {"sections": [
     {
       "page_section_id": "title",

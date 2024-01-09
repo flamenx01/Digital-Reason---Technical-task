@@ -13,8 +13,10 @@ async function getHomepage() {
   const response = await fetch(`/data/pages/home.json`);
   try {
     const result = await response.json();
+    document.title = result.title;
     page.value = result;
   } catch (err) {
+    document.title = "Page Not Found";
     page.value = {"sections": [
     {
       "page_section_id": "title",
