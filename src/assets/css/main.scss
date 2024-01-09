@@ -1,4 +1,8 @@
 
+.page {
+  min-height: calc(100vh - 14rem);
+}
+
 section > .container {
   padding-top: 5rem;
   padding-bottom: 5rem;
