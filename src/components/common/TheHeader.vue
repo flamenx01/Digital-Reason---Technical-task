@@ -9,3 +9,9 @@
 import HeaderTop from '@/components/common/HeaderTop.vue';
 import HeaderNav from '@/components/common/HeaderNav.vue';
 </script>
+
+<style lang="scss">
+  header {
+    border-bottom: 1px solid #ccc;
+  }
+</style>
